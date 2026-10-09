@@ -1,0 +1,12 @@
+{
+  "name": "Lojinha",
+  "short_name": "Lojinha",
+  "description": "Gestão da loja: produtos, clientes, vendas e carteira",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#faf6f4",
+  "theme_color": "#b9466e",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

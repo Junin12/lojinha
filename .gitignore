@@ -1,0 +1,4 @@
+*.json.bak
+backup-lojinha-*.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Loja virtual</title>
+  <meta name="description" content="Veja nossos produtos: relógios, semijoias e roupas.">
+  <meta property="og:title" content="Nossa loja virtual">
+  <meta property="og:description" content="Toque para ver fotos, preços e todos os produtos.">
+  <meta name="theme-color" content="#b9466e">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding-bottom: 30px; }
+    .loja-head { text-align: center; padding: 28px 16px 22px; color: #fff; background: linear-gradient(135deg, #b9466e, #d97c8f 60%, #e8b07a); }
+    .loja-head h1 { margin: 0; font-size: 24px; }
+    .loja-head p { margin: 4px 0 0; opacity: .9; font-size: 14px; }
+    .detalhe { display: grid; gap: 18px; margin-bottom: 26px; }
+    @media (min-width: 760px) { .detalhe { grid-template-columns: 1fr 1fr; align-items: start; } }
+    .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; border-radius: 20px; background: var(--primary-soft); scrollbar-width: none; }
+    .carousel::-webkit-scrollbar { display: none; }
+    .carousel img, .carousel .sem-foto { flex: none; width: 100%; aspect-ratio: 1; object-fit: cover; scroll-snap-align: center; }
+    .carousel .sem-foto { display: grid; place-items: center; font-size: 70px; }
+    .dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+    .dots span { width: 8px; height: 8px; border-radius: 50%; background: #e6c3cf; transition: .2s; }
+    .dots span.on { background: var(--primary); width: 20px; border-radius: 4px; }
+    .detalhe h2 { font-size: 22px; margin-bottom: 6px; }
+    .detalhe .price { font-size: 26px; margin-bottom: 10px; }
+    .voltar { display: inline-block; margin-bottom: 14px; color: var(--primary); font-weight: 600; cursor: pointer; background: none; border: 0; padding: 0; }
+    .wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom)); width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; font-size: 28px; background: var(--wa); color: #fff; box-shadow: 0 8px 20px rgba(0, 0, 0, .2); }
+  </style>
+</head>
+<body>
+  <header class="loja-head">
+    <h1 id="nomeLoja">Loja virtual</h1>
+    <p>Toque em um produto para ver as fotos 💖</p>
+  </header>
+  <main id="conteudo"><div class="empty"><div class="spinner" style="margin:0 auto"></div></div></main>
+  <a class="wa-float hidden" id="waFloat" target="_blank" aria-label="Falar no WhatsApp">💬</a>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/loja.js"></script>
+</body>
+</html>
